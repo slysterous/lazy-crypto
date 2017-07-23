@@ -1,0 +1,25 @@
+{
+  "name": "lazy-crypto",
+  "version": "1.0.0",
+  "description": "Cryptography utilities for safe password and token handling.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slysterous/lazy-crypto.git"
+  },
+  "keywords": [
+    "cryptography",
+    "utiliti",
+    "password",
+    "token\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[y"
+  ],
+  "author": "Christos Petropoulos <chrispetropoulos91@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/slysterous/lazy-crypto/issues"
+  },
+  "homepage": "https://github.com/slysterous/lazy-crypto#readme"
+}
