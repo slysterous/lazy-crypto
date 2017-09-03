@@ -94,3 +94,6 @@ LazyCrypto.prototype.generateEmailVerificationToken=function(hours,length){
         expires: expires
     }
 }
+
+
+module.exports=LazyCrypto;

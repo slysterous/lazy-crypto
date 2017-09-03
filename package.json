@@ -1,25 +1,41 @@
 {
   "name": "lazy-crypto",
-  "version": "1.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "Cryptography utilities for safe password and token handling.",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz",
+    "test": "mocha src/index.test.js -w",
+    "test:single": "mocha src/index.test.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/slysterous/lazy-crypto.git"
+    "url": "https://github.com/slysterous/lazy-crypto.git"
   },
   "keywords": [
     "cryptography",
     "utiliti",
     "password",
-    "token\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[y"
+    "token"
   ],
   "author": "Christos Petropoulos <chrispetropoulos91@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/slysterous/lazy-crypto/issues"
   },
-  "homepage": "https://github.com/slysterous/lazy-crypto#readme"
+  "homepage": "https://github.com/slysterous/lazy-crypto#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "4.1.2",
+    "commitizen": "2.9.6",
+    "cz-conventional-changelog": "2.0.0",
+    "mocha": "3.5.0",
+    "semantic-release": "^7.0.2"
+  }
 }
