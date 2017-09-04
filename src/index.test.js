@@ -56,7 +56,3 @@ describe("Generation of SHA 512 Hash along with a Unique Salt",function(){
         expect(lazyCrypto.validateSha512HashAndSalt("password",res.passwordSalt,res.passwordHash));
     })
 })
-
-//generateSha512HashAndSalt
-  //passwordSalt:passwordData.salt,
-    //    passwordHash:passwordData.passwordHash
