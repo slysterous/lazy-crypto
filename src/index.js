@@ -17,7 +17,9 @@ const crypto =require('crypto');
 * @param {number} length - defines the length of the salt that will be generated
 * @return {string} - returns the generated salt 
 */
- LazyCrypto.prototype.generateSalt=function(length){
+LazyCrypto.prototype.generateSalt=generateSalt;
+function generateSalt(length)
+{
     return crypto.randomBytes(Math.ceil(length/2))
     .toString('hex') /** convert to hexadecimal format */
     .slice(0,length);   /** return required number of characters */
@@ -30,7 +32,8 @@ const crypto =require('crypto');
 * @param {strng} salt - Required salt to use on hash creation
 * @return {object} - Returns an object containing salt and passwordhash
 */
-LazyCrypto.prototype.generateSha512Hash=function(password,salt){
+LazyCrypto.prototype.generateSha512Hash=generateSha512Hash
+function generateSha512Hash(password,salt){
 var hash=crypto.createHmac('sha512',salt); /** Hashing algorithm sha512 **/
      hash.update(password);
      var value= hash.digest('hex');
@@ -48,7 +51,7 @@ var hash=crypto.createHmac('sha512',salt); /** Hashing algorithm sha512 **/
  * @return {object} containing passwordSalt and passwordHash
  */
 LazyCrypto.prototype.generateSha512HashAndSalt=function(password,saltlength){
-    var salt=GenerateSalt(saltlength);
+    var salt=generateSalt(saltlength);
     var passwordData=generateSha512Hash(password,salt);
     return{
         passwordSalt:passwordData.salt,
@@ -79,7 +82,7 @@ LazyCrypto.prototype.validateSha512HashAndSalt=function(password,salt,passwordHa
  * @param {number} hours - defines tha ammount of hours the specific token will be available for
  * @param {length} length - devi
  */
-LazyCrypto.prototype.generateEmailVerificationToken=function(hours,length){
+LazyCrypto.prototype.generateVerificationToken=function(hours,length){
     //create random character token
     var chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     var token = '';
